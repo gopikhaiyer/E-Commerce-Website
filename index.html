@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GopsCart - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Image fit fix */
+    .card-img-top {
+      height: auto;
+      max-height: 250px;
+      width: 100%;
+      object-fit: contain;
+      background-color: #f9f9f9;
+      padding: 10px;
+    }
+
+    /* Zoom effect */
+    .product-card img {
+      transition: transform 0.3s ease-in-out;
+      transform-origin: center center;
+    }
+
+    .product-card:hover img,
+    .product-card:focus-within img {
+      transform: scale(1.1);
+    }
+
+    .product-card {
+      overflow: hidden;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">GopsCart</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search products..." aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <div class="container">
+      <h1>Discover Our Latest Collection</h1>
+      <p>Style, Quality, and Comfort – All in One Place</p>
+    </div>
+  </header>
+
+  <!-- Product Grid -->
+  <div class="container my-5">
+    <div class="row g-4">
+
+      <!-- Product 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 product-card" tabindex="0">
+          <img src="smart watch.jpg" class="card-img-top" alt="Smart Watch">
+          <div class="card-body">
+            <h5 class="card-title">Smart Watch</h5>
+            <p class="card-text">₹1,999 – Fitness watch with notifications.</p>
+            <input type="number" class="form-control w-50 mb-2" min="1" value="1">
+            <button class="btn btn-dark w-100 add-to-cart">Add to Cart</button>
+            <p class="mt-2 text-muted small">⭐️⭐️⭐️⭐️ – Very useful!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 product-card" tabindex="0">
+          <img src="wireless headphone.jpg" class="card-img-top" alt="Wireless Headphones">
+          <div class="card-body">
+            <h5 class="card-title">Wireless Headphones</h5>
+            <p class="card-text">₹2,499 – Noise-cancelling and comfy.</p>
+            <input type="number" class="form-control w-50 mb-2" min="1" value="1">
+            <button class="btn btn-dark w-100 add-to-cart">Add to Cart</button>
+            <p class="mt-2 text-muted small">⭐️⭐️⭐️⭐️⭐️ – Great sound!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 product-card" tabindex="0">
+          <img src="gaming mouse.webp" class="card-img-top" alt="Gaming Mouse">
+          <div class="card-body">
+            <h5 class="card-title">Gaming Mouse</h5>
+            <p class="card-text">₹799 – Precision and RGB lighting.</p>
+            <input type="number" class="form-control w-50 mb-2" min="1" value="1">
+            <button class="btn btn-dark w-100 add-to-cart">Add to Cart</button>
+            <p class="mt-2 text-muted small">⭐️⭐️⭐️⭐️ – Perfect grip!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="col-md-4">
+        <div class="card h-100 product-card" tabindex="0">
+          <img src="speaker.jpg" class="card-img-top" alt="Bluetooth Speaker">
+          <div class="card-body">
+            <h5 class="card-title">Bluetooth Speaker</h5>
+            <p class="card-text">₹1,499 – Deep bass and portable.</p>
+            <input type="number" class="form-control w-50 mb-2" min="1" value="1">
+            <button class="btn btn-dark w-100 add-to-cart">Add to Cart</button>
+            <p class="mt-2 text-muted small">⭐️⭐️⭐️⭐️⭐️ – Loud & clear!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="col-md-4">
+        <div class="card h-100 product-card" tabindex="0">
+          <img src="sneakers.webp" class="card-img-top" alt="Casual Sneakers">
+          <div class="card-body">
+            <h5 class="card-title">Casual Sneakers</h5>
+            <p class="card-text">₹1,999 – Breathable and stylish.</p>
+            <input type="number" class="form-control w-50 mb-2" min="1" value="1">
+            <button class="btn btn-dark w-100 add-to-cart">Add to Cart</button>
+            <p class="mt-2 text-muted small">⭐️⭐️⭐️⭐️ – Comfy fit!</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast: Cart Notification -->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1055">
+    <div id="cartToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          ✅ Item added to cart
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 GopsCart.Lots of hardwork involved..</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Toast Script -->
+  <script>
+    const cartToastEl = document.getElementById('cartToast');
+    const toast = new bootstrap.Toast(cartToastEl);
+
+    document.querySelectorAll('.add-to-cart').forEach(btn => {
+      btn.addEventListener('click', () => {
+        toast.show();
+      });
+    });
+  </script>
+</body>
+</html>
